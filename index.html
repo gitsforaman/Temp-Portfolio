@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Tech Aman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/72218eaae3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <nav>
+                <img id="abc" src="images/logo.jpeg" class="logo" >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div><img id="xyz" src="images/image.jpeg"></div>
+            <div class="header-text">
+                <p>Website Developer</p>
+                <h1>Hi, I'm <span>Aman Srivastava</span></h1>
+                <h4>From Lucknow, Uttar Pradesh</h4>
+                <button><a href="images/mycv.pdf" class="btn btn2">Download CV</a></button>
+            </div>
+        </div>
+    </div>
+<!---------------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey there! 👋 I'm Aman Srivastava, a 18-year-old Computer Science undergraduate with a passion for Web Development. Currently, I'm embarking on my journey as a Web Developer 👨🏻‍💻. I'm a fresher, eager to explore new opportunities and face challenges in my field. This is my enthusiastic pursuit, and each day, I strive to learn and grow, aiming to make a meaningful impact. 🚀</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C Programing</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>css (Cascading Style Sheet)</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>WordPress</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Internship at Codsoft.</li>
+                            <li><span>2023 - 2024</span><br>Internship at Devtown.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2026</span><br>Bachelor of Technology (CSE) from Maharishi University of Information Technology, Lucknow</li>
+                            <li><span>2021 - 2022</span><br>Intermediate(12th) from SAPS Lucknow</li>
+                            <li><span>2019 - 2020</span><br>High School(10th) from SAPS Lucknow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!------------Contact---------->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> aman.krishna1226@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 8604966546</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="number" name="Mobile no." placeholder="Your Mobile no." required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+
+    <script>
+
+       var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+       
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+    </script>
+</body>
+</html>
